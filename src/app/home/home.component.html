@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="coffee-header">
+        <div class="left_coffee_block">
+            <div *ngFor="let coffe of leftcoffes; index as i" (click)="coffeefunction($event)" class="coffee">
+                <p class="coffe_name">{{coffe.name}}</p>
+                <p class="coffe_price">{{coffe.price}} AMD</p>
+            </div>
+        </div>
+        <div class="flex">
+            <div id="display" class="coffe-display"><p id="display_text" class="coffe_display_text" [innerHTML]="sum"></p></div>
+            <div class="coffe-header-details"></div>
+            <p style="text-align: center;
+            margin-top: 4px;">FOR COINS</p>
+        </div>  
+        <div class="right_coffee_block">
+            <div  *ngFor="let coffe of rightcoffes; index as i" (click)="coffeefunction($event)" class="coffee">
+                <p class="coffe_name">{{coffe.name}} </p>
+                <p class="coffe_price"> {{coffe.price}} AMD</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="coffee-medium">
+    <div class="coffe-medium__exit"></div>
+    <div class="coffe-medium__exit-before"></div>
+    <div class="coffe-medium__exit-after"></div>
+    <div *ngIf="isanimated" class="coffee-medium__liquid"></div>
+    <div *ngIf="isanimated" class="coffee-medium__smoke coffee-medium__smoke-one"></div>
+    <div *ngIf="isanimated" class="coffee-medium__smoke coffee-medium__smoke-two"></div>
+    <div *ngIf="isanimated" class="coffee-medium__smoke coffee-medium__smoke-three"></div>
+    <div *ngIf="isanimated" class="coffee-medium__smoke coffee-medium__smoke-for"></div>
+    <div *ngIf="isanimated" class="coffee-medium__cup"></div>
+    <div class="coffe-medium-footer"></div>
+</div>
+<div class="coffe-footer"></div>
+<div class="footer"></div>
+
+<div class="coins_block">
+    <div *ngFor="let coin of coines" class="coines">
+        <div (click)="coinfunction($event)" class="coin"><p class="coin_text">{{coin}}</p></div>
+    </div>
+</div>
